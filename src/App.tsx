@@ -135,17 +135,11 @@ function App() {
       <div className='whole-drum'>
       {isAudioClip1 ? (
         audioClip.map((clip) => (
-          <Drum  audioClip={clip}
-          active={true}
-          onClick={() => playAudio}
-          key={clip.keyTrigger}/>
+          <Drum  audioClip={clip} key={clip.keyTrigger}/>
         ))
       ) : (
         audioClip2.map((clip) => (
-          <Drum audioClip={clip}
-          active={true}
-          onClick={() => playAudio}
-          key={clip.keyTrigger} />
+          <Drum audioClip={clip} key={clip.keyTrigger} />
         ))
       )}
       </div>
