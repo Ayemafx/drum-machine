@@ -2,11 +2,9 @@ import { AudioClip } from "./types";
 
 interface DrumProps {
     audioClip: AudioClip;
-    active: boolean; // Add an "active" prop to track if the button is active
-    onClick: () => void; // Add a click handler
 }
 
-const Drum = ({ audioClip, active, onClick }: DrumProps) => {
+const Drum = ({ audioClip}: DrumProps) => {
     const playSound = (clip: AudioClip) => {
       const audioElement = document.getElementById(clip.keyTrigger) as HTMLAudioElement;
       if (audioElement) {
